@@ -1,38 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+nav .logoText {
+  color: #ff0ba3;
+}
+.logoCol {
+  color: #333;
+}
+
+.searchProduct  {
+  width: 48%;
+}
+
+.form-control {
+  border-color: #e5e7eb;
+}
+
+.form-control:focus {
+  border-color: #e5e7eb !important;
+  box-shadow: none !important;
+}
+
+.menuItem {
+  color: #6b7280;
+}
+
+.banner {
+  background: rgb(70,61,61);
+  background: linear-gradient(90deg, rgba(70,61,61,1) 0%, rgba(204,92,86,1) 100%);
+}
+
+.banner p {
+  color: #caced4;
+}
+.banner a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 .App {
-  text-align: center;
+  font-family: sans-serif;
+  color: #57606d;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dropdown {
+  margin: 0 auto;
+  z-index: 10000;
+  width: 300px;
+  position: relative;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dropdown,
+.dropdown * {
+  z-index: 10;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dropdown .dropdown-btn {
+  cursor: pointer;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background: white;
+  border: 1px solid #e6e8ec;
+  border-radius: 10px;
+  color: #9ca8a8;
+  font-weight: 500;
+}
+.dropdown-content {
+  position: absolute;
+  /* top: 110%; */
+  left: 0;
+  width: 100%;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  background: #fff;
+  height: 280px;
+  overflow-y: auto;
+}
+.dropdown-content .item {
+  padding: 10px;
+  cursor: pointer;
+  color: #0f2b2a;
+}
+.dropdown-content .item:hover {
+  background: #3b3b3b;
+  color: #f1f1f1;
+  border-radius: 10px;
+}
+
+.cardSection img {
+  height: 225px;
+  object-fit: cover;
+  object-position: top;
+  background-color: #fcfcfc;
+  transition: all 1s ease-in-out;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.card.cardSection:hover img {
+  transition: all 1s ease-in-out;
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+.cardSection .card-title {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #202a38;
+}
+
+.cardSection .card-text {
+  color: #7a7a7a;
+}
+
+.cardSection .cardPrice {
+  font-weight: bold;
+  color: #202a38;
+}
+
+.truncateText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-height: 16px;
+  font-size: 0.75rem;
+  height: 32px;
+}
+.cardRating i.fa.fa-star {
+  color: #ffca28;
+}
+
+.page-item button {
+  color: #57606d;
+  border-color: #d1d5db;
+}
+
+.page-item.disabled button {
+  color: #000;
+  background-color: #d1d5db;
+}
+
+.page-item.active button {
+  font-weight: bold;
+  background-color: #1f2937;
+  border-color: #cecece;
+  color: #fff;
+}
+
+.page-item button:focus {
+  border-color: #cecece;
+  outline: 0 !important;
+  box-shadow: none;
+}
+
+.page-item {
+  margin-left: 8px;
+}
+
+.footerSection {
+  background-color: #f9fafb;
+}
+
+footer h5 {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+footer a, footer p {
+  font-size: 14px !important;
+  color: #6b7280 !important;
+}
+
+footer a:hover {
+  color: #000 !important;
+}
+
+footer .subscribeText, footer .subscribeText a {
+  font-size: 12px !important;
+}
+
+footer .subscribeBtn {
+  color: #fff;
+  background-color: #1f2937;
+}
+
+footer .subscribeBtn:hover {
+  color: #fff;
+  background-color: #1f2937;
+}
+
+.socialIcon a {
+  background: #1f2937;
+  padding: 6px 7px;
+  border-radius: 50%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.socialIcon .faceBook a {
+  padding: 6px 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.socialIcon i, .socialIcon svg {
+  color: #f9fafb;
+  font-size: 18px;
+}
+.socialIcon svg {
+  width: 18px;
+  height: 18px;
+  fill: #fff;
+}
+.socialIcon-platform i {
+  font-size: 25px;
+}
+.payCards i {
+  font-size: 24px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+@media screen and (max-width: 992px) {
+  .searchProduct  {
+    width: 30%;
   }
-  to {
-    transform: rotate(360deg);
+  .iconSection {
+    flex-direction: column;
   }
 }
