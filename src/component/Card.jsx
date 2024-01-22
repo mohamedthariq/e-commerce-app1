@@ -24,7 +24,7 @@ const ProductList = ({ selected, searchRes }) => {
           setFilterData(filterData.products);
           // console.log(filterData);
         } catch (error) {
-          console.error("Error fetching dropdown selected data:", error);
+          console.error("Error fetching from dropdown selected data:", error);
         }
     };
 
